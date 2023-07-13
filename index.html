@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introdução à Agilidade utilizando o Framework Scrum</title>
+    <!-- Animação -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap"
       rel="stylesheet"
-    />
+    />   
 
     <!-- Biblioteca de Ícones -->
     <script
@@ -20,6 +22,9 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Script Animação AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
     <!-- Navegação -->
@@ -47,20 +52,20 @@
               href="https://www.linkedin.com/company/agil-em-foco/"
               target="_blank"
             >
-              <i class="fa-brands fa-linkedin social-icon"></i>
+              <i class="fa-brands fa-linkedin social-icon" ></i>
             </a>
           </div>
         </nav>
         <!-- chamada para o público -->
         <div class="navigation-wrapper">
-          <h1>
+          <h1 data-aos="zoom-in-up" data-aos-delay="200">
             Quer aumentar sua renda, trabalhar de casa e mudar a sua carreira
             para uma das
             <strong class="destaque">profissões mais promissoras</strong> do
             mercado?
           </h1>
           <!-- botão de interesse -->
-          <button class="btn">
+          <button class="btn" data-aos="zoom-in" data-aos-delay="300">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSeV-AFMYZeHnTXwMAAWLaeY9UQj-FtECM8uoIN4FM9-PYRRuA/viewform"
               class="btn-link"
@@ -70,7 +75,7 @@
           </button>
           <!-- ícone setinha -->
           <a href="#section01">
-            <i class="fa-solid fa-angles-down arrow-down"></i>
+            <i class="fa-solid fa-angles-down arrow-down" data-aos="zoom-in-down"></i>
           </a>
         </div>
       </div>
@@ -138,6 +143,7 @@
           <img
             src="./assets/banner/curso-mockup.png"
             alt="mockup de um notebook e tablet com o título do curso de introdução à Agilidade utilizando o framework Scrum."
+            data-aos="fade-right"
           />
           <h2 class="subtitle">Sobre o Curso</h2>
           <p>
@@ -173,22 +179,22 @@
             trazem para dentro de uma empresa e como entrar para essa carreira.
           </p>
           <div class="resumo-cards">
-            <div class="resumo-card">
+            <div class="resumo-card" data-aos="fade-down" data-aos-delay="100">
               <i class="fa-solid fa-person-chalkboard"></i>
               <p>Aula Teórica</p>
             </div>
 
-            <div class="resumo-card">
+            <div class="resumo-card" data-aos="fade-down" data-aos-delay="110">
               <i class="fa-solid fa-chart-column"></i>
               <p>Aula Prática</p>
             </div>
 
-            <div class="resumo-card">
+            <div class="resumo-card" data-aos="fade-down" data-aos-delay="120">
               <i class="fa-solid fa-book"></i>
               <p>Materiais Complementares</p>
             </div>
 
-            <div class="resumo-card">
+            <div class="resumo-card" data-aos="fade-down" data-aos-delay="130">
               <i class="fa-solid fa-certificate"></i>
               <p>Certificado de Conclusão</p>
             </div>
@@ -208,7 +214,7 @@
           </p>
 
           <div class="depoimentos-cards">
-            <div class="depoimento-card">
+            <div class="depoimento-card" data-aos="zoom-in">
               <div class="estrelas">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -231,7 +237,7 @@
               </blockquote>
             </div>
             <!--  -->
-            <div class="depoimento-card">
+            <div class="depoimento-card" data-aos="zoom-in" data-aos-delay="100">
               <div class="estrelas">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -254,7 +260,7 @@
               </blockquote>
             </div>
             <!--  -->
-            <div class="depoimento-card">
+            <div class="depoimento-card" data-aos="zoom-in" data-aos-delay="100">
               <div class="estrelas">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -277,7 +283,7 @@
               </blockquote>
             </div>
             <!--  -->
-            <div class="depoimento-card">
+            <div class="depoimento-card" data-aos="zoom-in" data-aos-delay="100">
               <div class="estrelas">
                 <i class="fa-solid fa-star"></i>
                 <i class="fa-solid fa-star"></i>
@@ -442,11 +448,11 @@
             </div>
           </div>
           <!-- botão de interesse -->
-          <button class="btn">
+          <button class="btn" data-aos="zoom-in">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSeV-AFMYZeHnTXwMAAWLaeY9UQj-FtECM8uoIN4FM9-PYRRuA/viewform"
               class="btn-link"
-              target="_blank"
+              target="_blank"              
               >tenho interesse</a
             >
           </button>
@@ -472,6 +478,7 @@
               class="foto-anne"
               src="./assets/anne/anne-palestra-500.png"
               alt="Imagem de Anne Caroline Melo Santos utlizando uma blusa preta e com os braços cruzados e ao fundo vemos de forma opaca uma palestra que ela deu servindo de background para a imagem."
+              data-aos="zoom-in" data-aos-delay="300"
             />
             <h3 class="titulo-anne">Anne Caroline Melo Santos</h3>
             <!-- adesivos das certificações -->
@@ -575,7 +582,7 @@
             investimento em nosso curso será de:
           </p>
 
-          <div class="investimento-card">
+          <div class="investimento-card" data-aos="zoom-in">
             <i class="fa-solid fa-money-bill-1-wave"></i>
             <p class="valor">R$ 129,90</p>
             <p>Formas de pagamento: PIX ou Transferência Bancária</p>
@@ -596,7 +603,7 @@
             <strong class="destaque">terem a atenção plena da mentora</strong>.
           </p>
 
-          <div class="data-card">
+          <div class="data-card" data-aos="zoom-in">
             <p class="novas-turmas">Novas turmas em breve</p>
             <p class="curso-online">
               <i class="fa-solid fa-hand-pointer fa-rotate-90"></i> 100% online
@@ -613,7 +620,7 @@
             ></a>
           </div>
           <!-- botão de interesse -->
-          <button class="btn">
+          <button class="btn" data-aos="zoom-in" data-aos-delay="400">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSeV-AFMYZeHnTXwMAAWLaeY9UQj-FtECM8uoIN4FM9-PYRRuA/viewform"
               class="btn-link"
@@ -660,7 +667,7 @@
             iniciar sua jornada na agilidade.
           </p>
           <!-- botão de interesse -->
-          <button class="btn">
+          <button class="btn" data-aos="zoom-in">
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSeV-AFMYZeHnTXwMAAWLaeY9UQj-FtECM8uoIN4FM9-PYRRuA/viewform"
               class="btn-link"
@@ -680,12 +687,13 @@
             src="./assets/logo/agil-branco.png"
             alt="Logo nas cores laranja e branco escrito Ágil em Foco"
             class="logo"
+            data-aos="flip-left" data-aos-delay="400"
           />
           <!-- redes sociais -->
           <div class="footer-social-links">
             <!-- instagram -->
             <a href="https://www.instagram.com/agilemfoco/" target="_blank">
-              <i class="fa-brands fa-instagram social-icon"></i>
+              <i class="fa-brands fa-instagram social-icon" data-aos="zoom-in-up" data-aos-delay="500"></i>
             </a>
             <!-- youtube -->
             <!-- <a href="#">
@@ -696,7 +704,7 @@
               href="https://www.linkedin.com/company/agil-em-foco/"
               target="_blank"
             >
-              <i class="fa-brands fa-linkedin social-icon"></i>
+              <i class="fa-brands fa-linkedin social-icon" data-aos="zoom-in-up" data-aos-delay="600"></i>
             </a>
           </div>
           <p>
@@ -712,5 +720,8 @@
       <img src="./assets/banner/whatssapp.svg" alt="logo do whatsapp na cor verde." />
       <span class="tooltip-text">Fale conosco</span>
     </a>
+
+    
+    <script src="./script.js"></script>
   </body>
 </html>
