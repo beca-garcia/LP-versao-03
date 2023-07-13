@@ -105,7 +105,7 @@ p {
 
 /* Header */
 header {
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 
 .bg-header {
@@ -133,6 +133,20 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.navigation img {
+    animation: logo 0.5s infinite alternate;
+    color: var(--icon-color);
+}
+
+@keyframes logo {
+    from {
+        transform: translateY(0) scale(1);
+    }
+    to {
+        transform: translateY(-8px) scale(1.05);
+    }    
 }
 
 .navigation-social-links {
