@@ -561,6 +561,43 @@ h1 {
     color: red;
 }
 
+/* Botão do Zap Zap */
+.btn-whatsapp {
+    position: fixed;
+    bottom: 1.4rem;
+    right: 2.4rem;
+    z-index: 99;
+}
+
+.btn-whatsapp img {
+    max-width: 5.4rem;
+    transition: transform 0.4s;
+}
+
+.btn-whatsapp img:hover {
+    transform: scale(1.1);
+}
+
+.btn-whatsapp .tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    width: 12rem;
+    top: 0.8rem;
+    left: -14.4rem;
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    text-align: center;
+    background-color: var(--destaque-color);
+    color: var(--color-white-light);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.btn-whatsapp:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 
 
