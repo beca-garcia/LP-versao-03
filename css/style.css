@@ -227,9 +227,6 @@ h1 {
     transform: scale(1.05);
     /* offset-x | offset-y | blur-radius | spread-radius | color */
     box-shadow: 1px 1px 10px 4px rgba(246, 246, 246, 0.502);
-    /* box-shadow: 1px 1px 10px 4px rgba(251, 86, 7, 0.3); */
-    /* box-shadow: 6px 6px 30px 5px rgba(255, 192, 2, 0.4); */
-    /* box-shadow: 6px 6px 30px 5px rgba(31, 31, 31, 0.4); */
 }
 
 .resumo-card i {
@@ -267,8 +264,10 @@ h1 {
 
 .depoimento-card:hover {
     box-shadow: 1px 1px 10px 4px #f6f6f680;
-    /* box-shadow: 1px 1px 10px 4px rgba(255, 230, 0, 0.5); */
-    /* box-shadow: 1px 1px 10px 4px rgba(251, 86, 7, 0.3); */
+}
+
+.depoimento-card:last-child:hover {
+    box-shadow: 1px 1px 10px 4px #0f0f0f80;
 }
 
 .depoimento-card .estrelas {
@@ -294,6 +293,7 @@ h1 {
 .depoimento-card cite p {
     color: var(--color-black);
     font-size: 1.5rem;
+    margin-top: 1.5rem;
     font-weight: 500;
     text-align: left;
 }
@@ -332,7 +332,7 @@ h1 {
     border-bottom: 2px solid var(--destaque-color);
     border-radius: 50%;
     margin-block: 1rem;
-    width: 8rem;
+    width: 15rem;
     display: block;
 }
 
@@ -356,6 +356,10 @@ h1 {
     margin-bottom: 15rem;
 }
 
+.container-anne h2 {
+    margin-bottom: 1.5rem;
+}
+
 .wrapper-flex .borda {
     border: 1px solid var(--border-button);
     border-radius: 1rem;
@@ -371,11 +375,11 @@ h1 {
 .wrapper-flex .borda .foto-anne {
     width: 80%;
     position: absolute;
-    top: -130px;
+    top: -160px;
 }
 
 .titulo-anne {
-    margin-top: 8.3rem;
+    margin-top: 13rem;
 }
 
 /* certificações */
