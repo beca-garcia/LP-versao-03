@@ -1,4 +1,14 @@
 
-@media screen and (max-width: 425px) {
+@media (min-width: 321px) and (max-width: 475px) {
+    .wrapper-flex .borda img.foto-anne {
+        /* width: 80%; */
+        width: 27rem;
+        position: absolute;
+        top: -160px;
+    }
+    
+    .titulo-anne {
+        margin-top: 11rem;
+    }
 
 }

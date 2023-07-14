@@ -373,13 +373,14 @@ h1 {
 }
 
 .wrapper-flex .borda .foto-anne {
-    width: 80%;
+    /* width: 80%; */
+    width: 22rem;
     position: absolute;
-    top: -160px;
+    top: -125px;
 }
 
 .titulo-anne {
-    margin-top: 13rem;
+    margin-top: 10rem;
 }
 
 /* certificações */
