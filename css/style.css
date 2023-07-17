@@ -4,26 +4,25 @@
     box-sizing: border-box;
 }
 
+/* variáveis */
 :root {
-    /* colors */
-    --bgc-body: #000;
-    --bgc-section: #f6f6f6;
-    --color-body: #fff;
-    --destaque-color: #fb5607;
-    --subtitle-color: #fb5607;
-    --color-black: #000;
-    --color-white-light: #f6f6f6;
-    /* botão */
-    --gradient-button: linear-gradient(45deg, #fb5607 34%, #fd8249 94%);  
-    --border-button: #fb5607;
-    --color-button: #fff;
-    /* ícones */
-    --icon-color: #fb5607;
-    --icone-gradient: linear-gradient(45deg, #fb5607 34%, #f3e249 94%);
-    --icon-estrelas : #ffe600;
+    /* cores de background */
+    --body: #000000;
+    --button: #fb5607;
 
-    /* social link */
-    --color-social-link: #fff;
+    /* cores de texto */
+    --body-color: #ffffff;
+    --light-white: #ffffff;
+    --dark-black: #000000;
+    --padrao: #fb5607;
+    --destaque: #fb5607;
+    --coracao: #ff0000;
+
+    /* botão e ícones */
+    --button-color: #fb5607;
+    --icone: #ffffff;
+    --estrelas: #ffe600;
+    --icone-gradient: linear-gradient(45deg, #fb5607 34%, #ffe600 94%);
 }
 
 html {
@@ -32,27 +31,14 @@ html {
 }
 
 body {
-    font-family: 'Outfit', sans-serif;
-    background-color: var(--bgc-body);
-    color: var(--color-body);
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--body);
+    color: var(--body-color);
     position: relative;
     scroll-behavior: smooth;
 }
 
-/* Configurações Gerais */
-.container {
-    width: 85%;
-    margin: 0 auto;
-}
-
-.logo {
-    width: 12%;
-}
-
-.icone-agil {
-    width: 50%;
-}
-
+/* Geral Tags */
 a {
     text-decoration: none;
 }
@@ -61,56 +47,119 @@ ul {
     list-style: none;
 }
 
-.btn {
-    background-image: var(--gradient-button);   
-    width: 25rem;
-    padding: 2rem 3rem;
-    border-radius: 0.5rem;
-    border: 1px solid var(--border-button);
-    cursor: pointer;
-    transition: transform 0.5s;
-}
-
-.btn:hover {
-    transform: scale(1.05);
-}
-
-.btn-link {
-    color: var(--color-button);
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.1rem;
-}
-
 section {
-    padding: 3rem 0;
+    padding-block: 4rem;
+}
+
+/* Geral Classes */
+.container {
+    /* border: 1px dashed #ffff00; */
+    width: 80%;
+    margin: 0 auto;
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
 }
 
 .destaque {
-    color: var(--destaque-color);
+    color: var(--destaque);
+    /* ver como animar essa propriedade */
 }
 
-.subtitle {
-    font-size: 2.5rem;
-    text-align: center;
-    color: var(--subtitle-color);
+/* imagens */
+.agil-em-foco {
+    width: 4.8rem; /* 48px */
 }
 
-p {
-    font-size: 1.8rem;
+.img-icone {
+    width: 8.8rem;
+}
+
+/* ícones  */
+.social-icon {
+    font-size: 2.4rem;   
+    color: var(--icone); 
+    transition: transform 0.2s;
+}
+
+.social-icon:hover {
+    color: var(--padrao);
+    transform: scale(1.2)
+}
+
+.estrelas {
+    color: var(--estrelas);
+    font-size: 1.6rem;   
+}
+
+.aspas {
+    color: var(--padrao);
+    font-size: 0.8rem;
+    padding-inline: 0.2rem;
+}
+
+/* Geral Classes Textos */
+.title {
+    font-size: 32px;
     line-height: 150%;
     text-align: center;
 }
 
-.wrapper-flex {
-    display: flex;
-    flex-direction: column;
-    gap: 1.8rem;
+.subtitle {
+    font-size: 24px;
+    line-height: 140%;
+    text-align: center;
+    color: var(--padrao);
 }
 
-/* Header */
-header {
-    padding: 2rem 0;
+.p-principal {
+    font-size: 16px;
+    line-height: 120%;
+    text-align: center;    
+}
+
+/* Botões */
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--button-color);
+    background-color: var(--button);
+    border-radius: 1rem;
+    width: 24rem;
+    height: 5.6rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--light-white);
+    animation: botaoAnimado 0.5s infinite alternate;
+}
+
+@keyframes botaoAnimado {
+    from {
+        transform: translateZ(0) scale(1);
+    }
+    to {
+        transform: translateZ(-8px) scale(1.1);
+    }    
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+/* Cabeçalho */
+#header {
+    padding-block: 4rem;
 }
 
 .bg-header {
@@ -120,8 +169,8 @@ header {
 .bg-header::before {
     content: "";
     display: block;
-    position: absolute;
     background-image: linear-gradient(to bottom, #0000001a, rgb(0, 0, 0)), url("../assets/banner/mulher_animada.jpeg");
+    position: absolute;    
     left: 0;
     top: 0;
     width: 100%;
@@ -133,382 +182,251 @@ header {
     opacity: 0.5;
 }
 
-.navigation {
-    width: 100%;
+/* Navegação */
+.header-navigation {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0;
 }
 
-.navigation img {
-    animation: logo 0.5s infinite alternate;
-}
-
-@keyframes logo {
-    from {
-        transform: translateY(0) scale(1);
-    }
-    to {
-        transform: translateY(0) scale(1.08);
-    }    
-}
-
-.navigation-social-links {
+.social-links {
     display: flex;
-    gap: 2rem;
+    gap: 1.6rem;
 }
 
-.navigation-social-links a i:hover {
-    animation: translateY 0.5s infinite alternate;
-    color: var(--icon-color);
-}
-
-@keyframes translateY {
-    from {
-        transform: translateY(0) scale(1);
-    }
-    to {
-        transform: translateY(-8px) scale(1.1);
-    }    
-}
-
-.navigation-social-links .social-icon {
-    font-size: 2.6rem;
-    color: var(--color-social-link);
-}
-
-.navigation-wrapper {
+.text-box-navigation {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3.5rem;
-    padding: 4rem 0 2rem;
+    align-items: center; 
+    gap: 3.2rem;
+    padding-block: 3.2rem;  
 }
 
-h1 {
-    text-align: center;
-    line-height: 150%;
-    font-size: 3rem;
-}
-
-.navigation-wrapper .arrow-down {
-    font-size: 2.5rem;
+.text-box-navigation .social-icon {
     background-image: var(--icone-gradient);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }
 
-/* Resumo */
-.resumo-cards {
+h1 .bgc-destaque {
+    background-color: var(--destaque);
+}
+
+/* Seção 03 | Como Funciona Nosso Curso */
+.card {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;    
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 2.4rem;
+    border-radius: 0.8rem;
+    background-color: var(--light-white);
+    width: 25.6rem;
+    padding: 2.4rem;
+} 
+
+.card:hover {
+    box-shadow: 4px 4px 8px var(--padrao);
 }
 
-.resumo-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;   
-    background-color: var(--color-white-light);
-    border-radius: 0.8rem;  
-    padding: 2rem;  
-    width: 20rem;
-    height: 20rem;
-    transition: transform 0.5s;
-}
-
-.resumo-card:hover {
-    transform: scale(1.05);
-    /* offset-x | offset-y | blur-radius | spread-radius | color */
-    box-shadow: 1px 1px 10px 4px rgba(246, 246, 246, 0.502);
-}
-
-.resumo-card p {
-    color: var(--color-black);
-}
-
-/* Depoimentos */
-#depoimentos {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.993), #f6f6f6);
-}
-
-.depoimentos-cards {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.depoimento-card {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem; 
-    background-color: var(--color-white-light);    
-    border-radius: 0.8rem;  
-    padding: 1rem; 
-    width: auto;
-    height: auto;
-}
-
-.depoimento-card:hover {
-    box-shadow: 1px 1px 10px 4px #f6f6f680;
-}
-
-.depoimento-card:last-child:hover {
-    box-shadow: 1px 1px 10px 4px #0f0f0f80;
-}
-
-.depoimento-card .estrelas {
-    color: var(--icon-estrelas);
-    font-size: 2.2rem;
-}
-
-.depoimento-card p {
-    color: var(--color-black);
-    font-weight: 300;
-}
-
-.depoimento-card p i.aspas-esquerda {
-    color: var(--icon-color);
-    margin-right: 0.5rem;
-}
-
-.depoimento-card p i.aspas-direita {
-    color: var(--icon-color);
-    margin-left: 0.5rem;
-}
-
-.depoimento-card cite p {
-    color: var(--color-black);
-    font-size: 1.5rem;
-    margin-top: 1.5rem;
-    font-weight: 500;
-    text-align: left;
-}
-
-/* Conteúdo Programático */
-#programacao {
-    background-color: var(--bgc-section);
-}
-
-#programacao .wrapper-flex p {
-    color: var(--color-black);
-}
-
-.wrapper-programacao {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-}
-
-.container-topicos h3 {
-    font-size: 2.5rem;
-    color: var(--color-black);
-}
-
-.titulo-topico .numero {
-    font-size: 2.5rem;
+.card .p-principal {
+    color: var(--dark-black);
     font-weight: 700;
 }
 
-.titulo-topico .ponto {
-    font-size: 0.5rem;
-    margin-right: 1rem;
+#curso-resumo .text-box {
+    justify-content: center;
+    align-items: center;
+    gap: 3.2rem;
 }
 
-.container-topicos .linha {
-    border-bottom: 2px solid var(--destaque-color);
+/* Seção 04 | Depoimentos */
+.cards-depoimento {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+.card-depoimento {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    border-radius: 0.8rem;
+    background-color: var(--light-white);
+    color: var(--dark-black);
+    width: 29rem;
+    padding: 0.8rem;
+}
+
+.card-depoimento:hover {
+    box-shadow: 4px 4px 8px var(--estrelas) ;
+}
+
+blockquote p {
+    font-weight: 500;            
+}
+
+blockquote cite p {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-top: 0.8rem;
+}
+
+/* Seção 05 | Conteúdo Programático */
+#conteudo-programatico {
+    background-color: var(--body-color);    
+}
+
+#conteudo-programatico .text-box {
+    justify-content: center;
+    align-items: center;
+}
+
+#conteudo-programatico p {
+    color: var(--dark-black);
+}
+
+.topicos {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding-block: 1.6rem;
+}
+
+.topico .subtitle {
+    text-align: left;
+    color: var(--dark-black);
+}
+
+.numero {
+    font-size: 2.4rem;
+}
+
+.ponto {
+    font-size: 0.8rem;
+}
+
+.linha {
+    border-bottom: 2px solid var(--destaque);
     border-radius: 50%;
     margin-block: 1rem;
     width: 15rem;
     display: block;
 }
 
-.container-topicos p {
-    color: var(--color-black);
-    font-weight: 300;
+/* Seção 06 | Anne Caroline */
+
+.container-anne p {
+    margin-bottom: 2.4rem;
 }
 
-.wrapper-flex button {
-    align-self: center;
+.container-anne p:last-child {
+    margin-bottom: 0;
 }
 
-/* Anne */
-#anne .wrapper-flex h3 {
-    font-size: 2rem;
-    text-align: center;
-    color: var(--destaque-color);
+.container-anne-foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block:1.6rem ;
 }
 
-.container-anne {
-    margin-bottom: 15rem;
+.anne-img {
+    width: 32.8rem;
 }
 
-.container-anne h2 {
-    margin-bottom: 1.5rem;
+.certificacoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-block:1.6rem;
 }
 
-.wrapper-flex .borda {
-    border: 1px solid var(--border-button);
-    border-radius: 1rem;
-    padding: 1rem 0.5rem;
+.certificacao {
+    width: 30.4rem;
+}
+
+/* Seção 07 | Investimento */
+#investimento .text-box {
+    justify-content: center;
+    align-items: center;
+}
+
+.card-investimento {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    position: relative;
+    gap: 1.6rem;
+    border-radius: 0.8rem;
+    background-color: var(--light-white);
+    color: var(--dark-black);
+    width: 25.6rem;
+    padding: 2.4rem;
 }
 
-.wrapper-flex .borda .foto-anne {
-    width: 22rem;
-    position: absolute;
-    top: -125px;
+.card-investimento:hover {
+    box-shadow: 4px 4px 8px var(--padrao);
 }
 
-.titulo-anne {
-    margin-top: 10rem;
+.card-investimento .p-principal {
+    font-size: 0.8rem;
+    font-weight: 700;
 }
 
-/* certificações */
-.container-certificacoes {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.2rem;
+.numeros i {
+    font-size: 4rem;
+    font-weight: 700;
 }
 
-.container-certificacoes img {
-    width: 30px;
-    height: 30px;
+.numeros i.ponto {
+    font-size: 0.8rem;
 }
 
-.container-certificacoes img.kanban {
-    height: auto;
-}
-
-/*  Resumo certificações */
-.resumo-certificacoes {
+/* Seção 08 | Datas Disponíveis */
+.card-novas-turmas {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    border-radius: 0.8rem;
+    background-color: var(--light-white);
+    color: var(--dark-black);
+    width: 25.6rem;
+    padding: 2.4rem;
 }
 
-.resumo-certificacoes .minhas-certificacoes {
-    color: var(--destaque-color);
-    font-size: 2rem;
+.card-novas-turmas:hover {
+    box-shadow: 4px 4px 8px var(--padrao);
+}
+
+.card-novas-turmas .p-principal {
+    font-weight: 700;
+    font-size: 3.2rem;
+}
+
+.card-novas-turmas .p-secundario {
+    font-weight: 700;
+    font-size: 2.4rem;
+    color: var(--destaque);
+}
+
+.card-novas-turmas .p-terciario {
     font-weight: 500;
+    font-size: 1.6rem;
+    text-align: center;
 }
 
-.certificacao p:nth-child(1) {
-    font-size: 1.5rem;
-}
-
-.certificacao p:nth-child(2) {
-    font-size: 1.2rem;
-    font-weight: 300;
-}
-
-/* Investimento */
-#investimento .wrapper-flex {
-    justify-content: center;
-    align-items: center;
-}
-
-.investimento-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem; 
-    background-color: var(--color-white-light);   
-    color: var(--color-black); 
-    border-radius: 0.8rem;  
-    padding: 1.5rem; 
-    width: 25rem;
-    height: auto;
-    margin-top: 2rem;
-}
-
-.investimento-card:hover {
-    box-shadow: 1px 1px 10px 4px #f6f6f680;
-}
-
-.investimento-card p.valor {
+.card-novas-turmas .social-icon {
+    color: var(--destaque);
     font-size: 4rem;
-    font-weight: 700;
 }
 
-.investimento-card p {
-    font-size: 1.2rem;
-    font-weight: 300;
-}
-
-/* Datas Disponíveis */
-#datas .wrapper-flex {
-    justify-content: center;
-    align-items: center;
-}
-
-.data-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem; 
-    background-color: var(--color-white-light);   
-    color: var(--color-black); 
-    border-radius: 0.8rem;  
-    padding: 1.5rem; 
-    width: 25rem;
-    height: auto;
-}
-
-.data-card:hover {
-    box-shadow: 1px 1px 10px 4px #f6f6f680;
-}
-
-.data-card p.novas-turmas {
-    font-size: 3rem;
-    font-weight: 700;
-}
-
-.data-card p.curso-online {
-    color: var(--destaque-color);
-    font-weight: 700;
-    font-size: 2rem;
-}
-
-.data-card p.curso-online i {
-    font-size: 2rem;
-    color: var(--color-black);
-    margin-right: 1rem;
-}
-
-.data-card a i {
-    color: var(--destaque-color);
-    font-size: 4rem;
-    animation: instagram 0.5s infinite alternate;
-}
-
-@keyframes instagram {
-    from {
-        transform: translateY(0) scale(1);
-    }
-    to {
-        transform: translateY(-2px) scale(1.08);
-    }    
-}
-
-/* Perguntas */
-
+/* Seção 09 | Para quem é este curso */
 .lista {
     display: flex;
     flex-direction: column;
@@ -516,7 +434,7 @@ h1 {
 }
 
 .lista li {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 
 .lista li i {
@@ -524,76 +442,55 @@ h1 {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    margin-right: 1rem;
+    margin-right: 0.8rem;
+    font-size: 1.6rem;
 }
 
-.duvidas-obsercacao {
-    font-size: 1.3rem;
-    font-weight: 300;
+#duvidas .p-secundario {
+    font-size: 1.6rem;
+    text-align: center;
 }
 
-/* Rodapé */
-#footer {
-    padding: 1rem 0 3rem;
-}
+/* Seção 10 | Rodapé */
 
-.nav-footer .logo {
-    width: 20%;
-}
-
-.nav-footer {
+.footer-navigation {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.footer-social-links {
-    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
+    gap: 2.4rem;
+    padding: 2.4rem;
 }
 
-.footer-social-links a i {
-    font-size: 3rem;
-    color: var(--color-white-light);    
+.footer-text {
+    text-align: center;
 }
 
-.footer-social-links a i:hover {
-    animation: translateY 0.5s infinite alternate;
-    color: var(--icon-color);
+.coracao {
+    color: var(--coracao);
+    font-size: 0.8rem;
+    animation: coracaoBatendo 0.4s infinite alternate;
 }
 
-@keyframes translateY {
+@keyframes coracaoBatendo {
     from {
-        transform: translateY(0) scale(1);
+        transform: translateZ(0) scale(1);
     }
     to {
-        transform: translateY(-8px) scale(1.1);
+        transform: translateZ(-8px) scale(1.3);
     }    
 }
 
-.nav-footer p {
-    font-size: 1rem;
-    line-height: 0;
-}
-
-.nav-footer p i {
-    color: red;
-}
-
-/* Botão do Zap Zap */
+/* Seção 11 | Botão do WhatsApp */
 .btn-whatsapp {
     position: fixed;
-    bottom: 1.4rem;
+    bottom: 1.6rem;
     right: 2.4rem;
     z-index: 99;
 }
 
 .btn-whatsapp img {
-    max-width: 5.4rem;
+    max-width: 5.6rem;
     transition: transform 0.4s;
 }
 
@@ -604,14 +501,15 @@ h1 {
 .btn-whatsapp .tooltip-text {
     visibility: hidden;
     position: absolute;
-    width: 12rem;
-    top: 0.8rem;
-    left: -14.4rem;
+    width: 10.4rem;
+    top: 1.6rem;
+    left: -12rem;
     padding: 0.8rem;
     border-radius: 0.8rem;
     text-align: center;
-    background-color: var(--destaque-color);
-    color: var(--color-white-light);
+    background-color: var(--destaque);
+    color: var(--light-white);
+    font-weight: 700;
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -620,9 +518,3 @@ h1 {
     visibility: visible;
     opacity: 1;
 }
-
-
-
-
-
-

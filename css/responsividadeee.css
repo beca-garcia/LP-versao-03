@@ -1,0 +1,135 @@
+
+@media (min-width: 321px) and (max-width: 475px) {
+    .wrapper-flex .borda img.foto-anne {
+        /* width: 80%; */
+        width: 27rem;
+        position: absolute;
+        top: -160px;
+    }
+    
+    .titulo-anne {
+        margin-top: 11rem;
+    }
+
+}
+
+@media (min-width: 476px) {
+    .navigation-social-links i.social-icon {
+        font-size: 4rem;
+    }  
+    
+    h1.title {
+        font-size: 4rem;
+    }
+    
+    button.btn {          
+        width: 35rem;
+        padding: 2.2rem 2rem;        
+    }
+
+    a.btn-link {
+        font-size: 2rem;        
+    }
+
+    .navigation-wrapper i.arrow-down {
+        font-size: 4rem;        
+    }
+
+    .subtitle {
+        font-size: 3.5rem;        
+    }
+    
+    p {
+        font-size: 2.5rem;
+    }
+
+    img.icone-agil {
+        width: 40%;
+    }
+
+    div.resumo-card {       
+        width: 25rem;
+        height: 25rem;        
+    }
+
+    div.depoimento-card {         
+        padding: 4rem;         
+    }
+
+    blockquote p {
+        font-size: 2.5rem;
+    }
+
+    div.depoimento-card cite p {
+        font-size: 2rem;        
+    }
+
+    div.container-anne {
+        margin-bottom: 25rem;
+    }
+
+    .wrapper-flex .borda img.foto-anne {
+        width: 42rem;
+        top: -255px;
+    }
+
+    #anne .wrapper-flex h3.titulo-anne {
+        font-size: 3.5rem;
+    }
+
+    h3.titulo-anne {
+        margin-top: 18rem;        
+    }
+
+    div.container-certificacoes img {
+        width: 40px;
+        height: 40px;
+        margin-block: 1rem;
+    }
+
+    .resumo-certificacoes p.minhas-certificacoes {
+        font-size: 2.8rem;
+    }
+    
+    div.certificacao p:nth-child(1) {
+        font-size: 2rem;
+    }
+    
+    div.certificacao p:nth-child(2) {
+        font-size: 1.5rem;
+    }
+
+    div.data-card {        
+        width: 45rem;
+    }
+
+    p.acompanhe-novidades {
+        font-size: 2rem;
+    }
+
+    .lista li.item-lista {
+        font-size: 2.5rem;
+    }
+
+    p.duvidas-obsercacao {
+        font-size: 1.8rem;
+    }
+
+    .nav-footer img.logo {
+        width: 15%;
+        margin-bottom: 2rem;
+    }
+
+    .nav-footer p.carinho {
+        font-size: 1.5rem;
+        line-height: 0;
+    }
+
+    .btn-whatsapp img.zap {
+        max-width: 8.4rem;
+    }
+
+    .btn-whatsapp span.tooltip-text {
+        font-size: 1.5rem;
+    }  
+}
