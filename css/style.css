@@ -158,8 +158,35 @@ section {
 }
 
 /* Cabeçalho */
+.banner-nova-turma {
+    border: 1px dashed yellow;
+    background-color: #ffe600;
+    border-radius: 1rem;
+    padding-block: 2rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    animation: banner 0.5s infinite alternate;
+
+}
+
+@keyframes banner {
+    from {
+        transform: translateZ(0) scale(0.8);
+    }
+    to {
+        transform: translateZ(-8px) scale(1);
+    }       
+}
+
+.banner-title {
+    font-size: 3.2rem;
+    text-align: center;
+    color: #000000;
+}
+
+
 #header {
-    padding-block: 4rem;
+    padding-block: 2rem 4rem;
 }
 
 .bg-header {
@@ -409,22 +436,28 @@ blockquote cite p {
     font-size: 3.2rem;
 }
 
-.card-novas-turmas .p-secundario {
+.card-novas-turmas .subtitle {
     font-weight: 700;
-    font-size: 2.4rem;
+    font-size: 3.2rem;
     color: var(--destaque);
 }
 
-.card-novas-turmas .p-terciario {
+.card-novas-turmas h3 {
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 2.4rem;
     text-align: center;
 }
 
-.card-novas-turmas .social-icon {
+.card-novas-turmas .p-secundario {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--padrao);
+}
+
+/* .card-novas-turmas .social-icon {
     color: var(--destaque);
     font-size: 4rem;
-}
+} */
 
 /* Seção 09 | Para quem é este curso */
 .lista {
