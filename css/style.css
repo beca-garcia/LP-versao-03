@@ -296,10 +296,9 @@ blockquote p {
     font-weight: 500;            
 }
 
-blockquote cite p {
+blockquote cite {
     font-weight: 700;
     font-size: 1.6rem;
-    margin-top: 0.8rem;
 }
 
 /* Seção 05 | Conteúdo Programático */
